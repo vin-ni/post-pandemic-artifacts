@@ -77,7 +77,7 @@ export default {
 
       navigator.mediaDevices
         .getUserMedia({
-          video: true,
+          video: { width: 1280, height: 720, facingMode: 'user' },
           audio: false,
         })
         .then((stream) => {
