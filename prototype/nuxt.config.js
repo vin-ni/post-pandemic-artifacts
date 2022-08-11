@@ -1,7 +1,6 @@
-const siteTitle = 'Vinzenz Aubry'
-const siteUrl = 'https://vinzenzaubry.com/'
-const siteDescription =
-  'Digital archive of media artist and designer Vinzenz Aubry.'
+const siteTitle = 'post-pandemic-artifacts'
+const siteUrl = ''
+const siteDescription = ''
 const siteImage = {
   url: `/ogimage.png`,
   height: 630,
@@ -98,11 +97,7 @@ export default {
   css: ['@/assets/styles/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '@/plugins/plugins.js', mode: 'client' },
-    '@/plugins/sanityImageBuilder.js',
-    '@/plugins/components.js',
-  ],
+  plugins: [{ src: '@/plugins/plugins.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -111,12 +106,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/sanity/module',
     '@nuxtjs/device',
   ],
-  sanity: {
-    useCdn: false,
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -124,18 +115,6 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    [
-      'nuxt-matomo',
-      {
-        matomoUrl: 'https://stats.vinzenzaubry.com/',
-        siteId: 2,
-        cookies: false,
-        trackerUrl: 'https://stats.vinzenzaubry.com/vinni.php?',
-        scriptUrl: 'https://stats.vinzenzaubry.com/vinni.js',
-        // debug: true,
-        // verbose: true,
-      },
-    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
