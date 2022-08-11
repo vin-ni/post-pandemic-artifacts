@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <div>
-    <p>welcome</p>
+    <Zoom />
   </div>
 </template>
 
