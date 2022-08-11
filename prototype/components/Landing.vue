@@ -1,7 +1,11 @@
 <!-- Please remove this file from your project -->
 <template>
   <div>
-    <Zoom />
+    <div v-if="showOverlay" class="intro">
+      <!-- <p>Allow Camera</p> -->
+      <p @click="start">Join Meeting</p>
+    </div>
+    <Zoom ref="zoom" />
   </div>
 </template>
 
@@ -10,11 +14,18 @@ export default {
   name: 'LandingPageComponent',
   props: {},
   data() {
-    return {}
+    return {
+      showOverlay: true,
+    }
   },
   computed: {},
   mounted() {},
   destroyed() {},
-  methods: {},
+  methods: {
+    start() {
+      this.$refs.zoom.start()
+      this.showOverlay = false
+    },
+  },
 }
 </script>

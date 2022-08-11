@@ -58,6 +58,7 @@ export default {
   computed: {},
   mounted() {
     this.setupVideos()
+    this.addCamera()
   },
   destroyed() {},
   methods: {
@@ -68,11 +69,32 @@ export default {
 
         // create video
         const refString = `vid-id-${keys[i]}`
-        console.log(refString)
-        console.log(this.$refs[refString])
         this.$refs[refString].src = `${playlist.root}${element.src}`
+      }
+    },
+    addCamera() {
+      const that = this
 
-        console.log(element)
+      navigator.mediaDevices
+        .getUserMedia({
+          video: true,
+          audio: false,
+        })
+        .then((stream) => {
+          that.$refs['vid-id-5'].srcObject = stream
+          that.$refs['vid-id-5'].play()
+          // this._videoEl.play();
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+
+    start() {
+      const keys = Object.keys(playlist.videos)
+      for (let i = 0; i < keys.length; i++) {
+        const refString = `vid-id-${keys[i]}`
+        this.$refs[refString].play()
       }
     },
   },
