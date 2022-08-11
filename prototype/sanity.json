@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "project": {
+    "name": "vinzenzaubry"
+  },
+  "api": {
+    "projectId": "29fiedpe",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/vision",
+    "computed-field"
+  ]
+}
