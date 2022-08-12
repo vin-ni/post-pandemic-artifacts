@@ -3,46 +3,46 @@
   <div class="zoom-component">
     <div class="video-wrapper">
       <div ref="vidwrap-id-0" class="video-card">
-        <video ref="vid-id-0" src=""></video>
+        <video ref="vid-id-0" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-1" class="video-card">
-        <video ref="vid-id-1" src=""></video>
+        <video ref="vid-id-1" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-2" class="video-card">
-        <video ref="vid-id-2" src=""></video>
+        <video ref="vid-id-2" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-3" class="video-card">
-        <video ref="vid-id-3" src=""></video>
+        <video ref="vid-id-3" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-4" class="video-card">
-        <video ref="vid-id-4" src=""></video>
+        <video ref="vid-id-4" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-5" class="video-card">
-        <video ref="vid-id-5" src=""></video>
+        <video ref="vid-id-5" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-6" class="video-card">
-        <video ref="vid-id-6" src=""></video>
+        <video ref="vid-id-6" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-7" class="video-card">
-        <video ref="vid-id-7" src=""></video>
+        <video ref="vid-id-7" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-8" class="video-card">
-        <video ref="vid-id-8" src=""></video>
+        <video ref="vid-id-8" preload="auto" src=""></video>
       </div>
       <div ref="vidwrap-id-9" class="video-card">
-        <video ref="vid-id-9" src=""></video>
+        <video ref="vid-id-9" preload="auto" src=""></video>
       </div>
       <div ref="vid-wrapid-10" class="video-card">
-        <video ref="vid-id-10" src=""></video>
+        <video ref="vid-id-10" preload="auto" src=""></video>
       </div>
       <div ref="vid-wrapid-11" class="video-card">
-        <video ref="vid-id-11" src=""></video>
+        <video ref="vid-id-11" preload="auto" src=""></video>
       </div>
     </div>
     <div class="bottom-bar">
-      <div class="left"><img src="/left.png" alt="" /></div>
-      <div class="middle"><img src="/icons.png" alt="" /></div>
-      <div class="right"><img src="/right.png" alt="" /></div>
+      <div class="left"><img src="~/static/left.png" alt="" /></div>
+      <div class="middle"><img src="~/static/icons.png" alt="" /></div>
+      <div class="right"><img src="~/static/right.png" alt="" /></div>
     </div>
   </div>
 </template>

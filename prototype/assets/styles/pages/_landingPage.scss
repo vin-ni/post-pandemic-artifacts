@@ -16,14 +16,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
 
     p {
       color: white;
       font-size: 2rem;
-      text-decoration: underline;
       cursor: pointer;
 
+      &.link-btn {
+        text-decoration: underline;
+      }
       &:hover {
         text-decoration: none;
         cursor: pointer;

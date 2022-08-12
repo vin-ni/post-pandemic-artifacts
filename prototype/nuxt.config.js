@@ -10,9 +10,9 @@ const siteImage = {
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server', // static
+  target: 'static', // static
   router: {
-    base: '/',
+    base: '/post-pandemic-artifacts/',
   },
 
   loading: {

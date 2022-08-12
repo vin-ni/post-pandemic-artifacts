@@ -3,7 +3,9 @@
   <div>
     <div v-if="showOverlay" class="intro">
       <!-- <p>Allow Camera</p> -->
-      <p @click="start">Join Meeting</p>
+      <p>Die Zwölf Apostel</p>
+      <p class="link-btn" @click="start">Join Meeting</p>
+      <p></p>
     </div>
     <Zoom ref="zoom" />
   </div>
@@ -15,6 +17,7 @@ export default {
   props: {},
   data() {
     return {
+      cameraAllowed: false,
       showOverlay: true,
     }
   },

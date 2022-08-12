@@ -2,51 +2,51 @@
   "root": "videos/",
   "videos": {
     "0": {
-      "src": "sample.mp4",
+      "src": "8.mp4",
       "loaded": false
     },
     "1": {
-      "src": "sample.mp4",
+      "src": "7.mp4",
       "loaded": false
     },
     "2": {
-      "src": "sample.mp4",
+      "src": "2.mp4",
       "loaded": false
     },
     "3": {
-      "src": "sample.mp4",
+      "src": "1.mp4",
       "loaded": false
     },
     "4": {
-      "src": "sample.mp4",
+      "src": "3.mp4",
       "loaded": false
     },
     "5": {
-      "src": "sample.mp4",
+      "src": "9.mp4",
       "loaded": false
     },
     "6": {
-      "src": "sample.mp4",
+      "src": "4.mp4",
       "loaded": false
     },
     "7": {
-      "src": "sample.mp4",
+      "src": "10.mp4",
       "loaded": false
     },
     "8": {
-      "src": "sample.mp4",
+      "src": "5.mp4",
       "loaded": false
     },
     "9": {
-      "src": "sample.mp4",
+      "src": "11.mp4",
       "loaded": false
     },
     "10": {
-      "src": "sample.mp4",
+      "src": "6.mp4",
       "loaded": false
     },
     "11": {
-      "src": "sample.mp4",
+      "src": "12.mp4",
       "loaded": false
     }
   }
