@@ -4,7 +4,8 @@
     <div v-if="showOverlay" class="intro">
       <!-- <p>Allow Camera</p> -->
       <p>Die Zwölf Apostel</p>
-      <p class="link-btn" @click="start">Join Meeting</p>
+      <p v-if="!videosLoaded">loading ...</p>
+      <p v-else class="link-btn" @click="start">Join Meeting</p>
       <p></p>
     </div>
     <Zoom ref="zoom" />
@@ -19,10 +20,13 @@ export default {
     return {
       cameraAllowed: false,
       showOverlay: true,
+      videosLoaded: false,
     }
   },
   computed: {},
-  mounted() {},
+  mounted() {
+    this.$refs.zoom.preloadVideos()
+  },
   destroyed() {},
   methods: {
     start() {

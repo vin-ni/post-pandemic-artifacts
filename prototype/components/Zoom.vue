@@ -53,12 +53,16 @@ export default {
   name: 'ZoomComponent',
   props: {},
   data() {
-    return {}
+    return {
+      videosLoaded: 0,
+      startedExperience: false,
+    }
   },
   computed: {},
   mounted() {
     this.setupVideos()
     this.addCamera()
+    console.log(this.$parent.videosLoaded)
   },
   destroyed() {},
   methods: {
@@ -70,6 +74,25 @@ export default {
         // create video
         const refString = `vid-id-${keys[i]}`
         this.$refs[refString].src = `${playlist.root}${element.src}`
+        this.$refs[refString].addEventListener('ended', (event) => {
+          this.videoLoaded()
+        })
+      }
+    },
+    videoLoaded() {
+      if (!this.startedExperience) {
+        this.videosLoaded++
+        this.checkAllLoaded()
+      }
+    },
+    checkAllLoaded() {
+      console.log('check')
+      console.log(this.videosLoaded)
+
+      if (this.videosLoaded === 11) {
+        console.log('yeah')
+        this.$parent.videosLoaded = true
+        this.startedExperience = true
       }
     },
     addCamera() {
@@ -94,7 +117,20 @@ export default {
       const keys = Object.keys(playlist.videos)
       for (let i = 0; i < keys.length; i++) {
         const refString = `vid-id-${keys[i]}`
+        this.$refs[refString].muted = false
+        this.$refs[refString].currentTime = 0
         this.$refs[refString].play()
+        this.$refs[refString].playbackRate = 1
+      }
+    },
+
+    preloadVideos() {
+      const keys = Object.keys(playlist.videos)
+      for (let i = 0; i < keys.length; i++) {
+        const refString = `vid-id-${keys[i]}`
+        this.$refs[refString].muted = true
+        this.$refs[refString].play()
+        this.$refs[refString].playbackRate = 10
       }
     },
   },
