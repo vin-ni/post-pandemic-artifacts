@@ -4,7 +4,7 @@
     <div v-if="showOverlay" class="intro">
       <!-- <p>Allow Camera</p> -->
       <p>Die Zwölf Apostel</p>
-      <p v-if="!videosLoaded">loading ...</p>
+      <p v-if="!videosLoaded">loading {{ loadedVideosInterface }}/12</p>
       <p v-else class="link-btn" @click="start">Join Meeting</p>
       <p></p>
     </div>
@@ -18,6 +18,7 @@ export default {
   props: {},
   data() {
     return {
+      loadedVideosInterface: 0,
       cameraAllowed: false,
       showOverlay: true,
       videosLoaded: false,

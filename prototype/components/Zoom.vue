@@ -82,15 +82,12 @@ export default {
     videoLoaded() {
       if (!this.startedExperience) {
         this.videosLoaded++
+        this.$parent.videosLoaded = this.videosLoaded
         this.checkAllLoaded()
       }
     },
     checkAllLoaded() {
-      console.log('check')
-      console.log(this.videosLoaded)
-
       if (this.videosLoaded === 11) {
-        console.log('yeah')
         this.$parent.videosLoaded = true
         this.startedExperience = true
       }
